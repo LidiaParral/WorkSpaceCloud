@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "jugador1" class = "demo.modelo.entidad.Jugador">
+		<property name = "id" value = "1"></property>
+		<property name = "nombre" value = "messi"></property>
+		<property name = "equipo" ref = "Barcelona"></property>
+		<property name = "camiseta" ref = "camiseta1"></property>	
+	</bean>
+		<bean id = "camiseta1" class = "demo.modelo.entidad.Camiseta">
+		<property name = "id" value = "1"></property>
+		<property name = "numero" value = "10"></property>
+		<property name = "marca" ref = "marca1"></property>	
+	</bean>
+		<bean id = "marca1" class = "demo.modelo.entidad.Marca">
+		<property name = "id" value = "1"></property>
+		<property name = "nombre" value = "Marca 1"></property>	
+	</bean>
+	<bean id = "Barcelona" class = "demo.modelo.entidad.Barcelona">
+	</bean>
+	<bean id = "Juventus" class = "demo.modelo.entidad.Juventus">
+	</bean>
+	
+
+</beans>

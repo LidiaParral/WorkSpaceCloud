@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="emailSingletone" class="demo.modelo.entidad.Email">
+		<property name="destinatario" value="Destinatario 1"></property>
+		<property name="remitente" value="Remitente 1"></property>
+		<property name="id" value="12"></property>
+	</bean>
+
+	<bean id="autorXml1" class="demo.modelo.entidad.Autor">
+		<property name="edad" value="99"></property>
+		<property name="id" value="99"></property>
+		<property name="nombre" value="Autor X"></property>
+	</bean>
+	
+	<!-- LIBROS -->
+
+	<bean id="libroXml1" class="demo.modelo.entidad.Libro">
+		<property name="autor" ref="autorXml1"></property>
+		<property name="editorial" value="Editorial 2"></property>
+		<property name="isbn" value="789"></property>
+	</bean>
+
+	<bean id="libroXml2" class="demo.modelo.entidad.Libro">
+		<property name="autor" ref="autorXml1"></property>
+		<property name="editorial" value="Editorial 3"></property>
+		<property name="isbn" value="345"></property>
+	</bean>
+</beans>

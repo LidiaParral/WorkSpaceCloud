@@ -1,0 +1,22 @@
+(ANOTACIONES)
+
+Un jugador de futbol se cambie de equipo dinamicamente
+por entrada de usuario y mostrar al final los valores del jugador
+
+Jugador:
+id
+nombre
+Equipo
+Camiseta
+
+Equipo:
+id
+nombre
+
+Camiseta:
+id
+numero marca
+
+Marca:
+id
+nombre

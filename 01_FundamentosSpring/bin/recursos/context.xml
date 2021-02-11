@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- En este fichero vamos a crear todos los objetos que queramos que sean gestionados por el contexto
+ de Spring, es decir aplicar la inversión de control o tambien llamada IoC-->
+ 
+ 
+ <!-- Un objeto spring se crea con la etiqueta "bean" y al menos hay que darle 2 atributos, el id, que debe
+ ser único y la clase de la cual hay que crear el objeto -->
+ 
+ <!-- El ciclo de vida de este objeto va a ser gestionado por spring y por defecto el ciclo
+ de vida será "sigleton", que significa que el objeto existirá siempre en la aplicación,
+ es decir, será único -->
+ 
+ <!-- Ademas el objeto deja de ser anónimo, y su identificador es el id -->
+ 
+ <bean id="persona1" class="entidad.Persona"></bean>
+
+</beans>

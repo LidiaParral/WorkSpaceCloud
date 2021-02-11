@@ -1,0 +1,10 @@
+Ejercicio 1, hacer una casa con Spring :) :)
+
+Pasos:
+
+1) Seguir el README.md para crear un proyecto Spring
+2) Copiar las clases de la casa a este proyecto
+3) Dar de alta los objetos en el fichero xml y establecer
+sus dependencias
+4) En el main SOLO se tiene que crear el contexto de spring
+y pedir el objeto "casa" ya formado, es decir 2 o 3 lineas
