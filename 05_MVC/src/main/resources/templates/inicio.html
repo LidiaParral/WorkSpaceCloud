@@ -5,6 +5,24 @@
 <title>Inicio</title>
 </head>
 <body>
-	<h1 style="color: blue"> Bienvenidos a Nuestra Web</h1>
+	<h1 style="color: blue">Bienvenidos a nuestra web</h1>
+	
+	<!-- Ahora pondemos entre ${} el nombre del atributo que hemos cargado en el controlador dentro del objeto Model -->
+	<p th:text= "'Hola ' + ${nombreUsuario}"></p>
+	<p>Hola <span th:text="${nombreUsuario}"></span></p>
+	
+	<!-- Para una lista de objetos.lista -> nombre del atributos del objeto Model que hemos puesto en
+	valor -> cada uno de los valores que tiene la lista, equivalente a
+	Ej:
+	for(String valor : lista){
+	    System.out.println(valor);
+	    }
+	     -->
+	     <h3 style="color: red" th:each="valor : ${lista}">
+	     	<span th:text="${valor.nombre}"></span>
+	     	<span th:text="${valor.password}"></span>
+	     </h3>
+	     	<!--  si valor fuera un objeto podemos acceder a sus atributos de la forma 
+	     	"valor.nombreAtributo" OJO!!!!! sin get! -->
 </body>
 </html>

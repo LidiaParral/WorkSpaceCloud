@@ -1,9 +1,12 @@
 package com.mvc.modelo.persistencia;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.mvc.modelo.entidad.Usuario;
 
+// //se esta creando un objeto de tipo DAOUsuario dentro del contexto de spring con el nombre de la clase y sera el rencargado de hacer todas la fucniones de la base de datos 
+@Repository
 public interface DaoUsuario extends JpaRepository<Usuario, Integer>{
 
 
