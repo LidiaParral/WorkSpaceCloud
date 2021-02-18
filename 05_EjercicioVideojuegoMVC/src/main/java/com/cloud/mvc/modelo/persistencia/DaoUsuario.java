@@ -1,9 +1,11 @@
-package com.mvc.modelo.persistencia;
+package com.cloud.mvc.modelo.persistencia;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.mvc.modelo.entidad.Usuario;
+import com.cloud.mvc.modelo.entidad.Usuario;
+
+
 
 //Se esta creando un objeto de tipo DAOUsuario dentro del contexto de spring con el nombre de la clase y sera el encargado de hacer todas la fucniones de la base de datos 
 @Repository
