@@ -1,0 +1,9 @@
+ Ejercicio Videojuego
+
+Replicar el ejemplo MVC pero esta vez queremos que cuando entremos
+a la pagina de de inicio, es decir una vez nos hayamos logado,
+mostremos una lista de videojuegos que este en BBDD, puede ser
+una MySql o puede ser una H2.
+
+La pagina tambien tendra un input text el cual nos permitira
+hacer busquedas de videojuego por ID
