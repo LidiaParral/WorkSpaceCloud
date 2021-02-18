@@ -5,11 +5,10 @@
 <title>Inicio</title>
 </head>
 <body>
-	<h1 style="color: blue">Bienvenidos a nuestra web</h1>
+	<h1 style="color: blue">Web de Videojuegos</h1>
 	
 	<!-- Ahora pondemos entre ${} el nombre del atributo que hemos cargado en el controlador dentro del objeto Model -->
-	<p th:text= "'Hola ' + ${nombreUsuario}"></p>
-	<p>Hola <span th:text="${nombreUsuario}"></span></p>
+	<p th:text= "'Hola ' + ${nombreUsuario} + ' esta es su lista de Videojuegos:'"></p>
 	
 	<!-- Para una lista de objetos.lista -> nombre del atributos del objeto Model que hemos puesto en
 	valor -> cada uno de los valores que tiene la lista, equivalente a
@@ -18,11 +17,12 @@
 	    System.out.println(valor);
 	    }
 	     -->
-	     <h3 style="color: red" th:each="valor : ${lista}">
+	     <h3 style="color: aqua;">Lista de Videojuegos:</h2>
+	     <h4 style="color: black" th:each="valor : ${lista}">
 	     	<span th:text="${valor.nombre}"></span>
-	     	<span th:text="${valor.password}"></span>
-	     </h3>
-	     	<!--  si valor fuera un objeto podemos acceder a sus atributos de la forma 
-	     	"valor.nombreAtributo" OJO!!!!! sin get! -->
+	     	<span th:text="${valor.marca}"></span>
+	     	<span th:text="${valor.precio} + ' euros'" ></span>
+	     </h4>
+	     
 </body>
 </html>

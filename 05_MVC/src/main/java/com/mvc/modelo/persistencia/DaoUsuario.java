@@ -17,5 +17,6 @@ public interface DaoUsuario extends JpaRepository<Usuario, Integer>{
 	
 	public Usuario findByNombreAndPassword(String nombre, String password);
 	
+	
 
 }

@@ -1,7 +1,11 @@
 package com.mvc.modelo.controlador;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -51,7 +55,7 @@ public class ControladorUsuario {
 	
 	@PostMapping("Logged")
 	public String logearse(@RequestParam("nombre_usuario") String nombre, @RequestParam("psswd") 
-			String password) {
+			String password, Model model) {
 		
 		//Pasar la información al GESTORUSUARIO
 		Usuario user = new Usuario();
@@ -62,6 +66,29 @@ public class ControladorUsuario {
 		 boolean validado = gestUsuario.validarUsuario(user);
 		 
 		 if(validado) {
+			//El objeto model le podemos poner
+				//todos los datos que queramos mandar a 
+				//la vista
+				model.addAttribute("nombreUsuario", nombre);
+				
+				//Este ejemplo de meter un lista habria que hacerlo
+				//llamando al modelo, este no esta bien pero para el 
+				//ejemplo vale
+				List<Usuario> listaUsuario = new ArrayList<>();
+				Usuario usuario1 = new Usuario();
+				usuario1.setNombre("Goku");
+				usuario1.setPassword("654321");
+				
+				listaUsuario.add(usuario1);
+				
+				usuario1 = new Usuario();
+				usuario1.setNombre("Steve Rogers");
+				usuario1.setPassword("987654");
+				
+				listaUsuario.add(usuario1);
+				
+				//Metemos la lista de usuarios en el modelo
+				model.addAttribute("lista", listaUsuario);
 			 //Retorna inicio.xml
 			 return "inicio";
 		 } else {
