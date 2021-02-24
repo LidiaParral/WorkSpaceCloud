@@ -14,17 +14,28 @@
 	
  -->
 
-	<form action="Logged" method="post">
+	<form action="Logged" method="post" target="_logged">
 	Nombre: <input type="text" name="nombre_usuario">
 	<br/>
 	<br/>
 	Password: <input type="password" name="psswd">
 	<br/><br/>
-	Videojuego a buscar: <input type="text" name="videojuego">
+	<label for="videojuego">Videojuego a buscar: </label>
+	<input type="text" id="videojuego" name="videojuego" list="listaVideojuegos">
 	<br/><br/>
 	<input type="submit" value="Enviar"> 
 	
 	</form>
+	
+	<datalist id="listaVideojuegos">
+	
+	  <option value="Sony">	
+	  <option value="Fornite">
+	  <option value="Grand Theft Auto V">
+	  <option value="Cyberpunk 2077">
+	  <option value="Minecraft">
+
+	</datalist>
 
 </body>
 </html>
