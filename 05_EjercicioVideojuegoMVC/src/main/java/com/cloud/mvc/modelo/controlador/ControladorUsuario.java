@@ -36,6 +36,9 @@ public class ControladorUsuario {
 		user.setNombre(nombre);
 		user.setPassword(password);
 		
+	
+		
+		
 		//Depende del resultado que devuelva, se retornará una u otra página
 		 boolean validado = gestUsuario.validarUsuario(user);
 		 
@@ -43,12 +46,11 @@ public class ControladorUsuario {
 			//El objeto model le podemos poner
 				//todos los datos que queramos mandar a 
 				//la vista
-				model.addAttribute("nombreUsuario", nombre);
+				model.addAttribute("nombre_usuario", nombre);
 				
 				List<Videojuego> listaVideojuego = gestVideojuego.obtenerListaVideojuegos();
 				
 				model.addAttribute("lista", listaVideojuego);
-				
 				
 	
 			 //Retorna inicio.xml
@@ -57,9 +59,7 @@ public class ControladorUsuario {
 			 //Retorna error.xml
 			 return "error";
 		 }
-		 
-	
-		
+			
 	}
 	
 

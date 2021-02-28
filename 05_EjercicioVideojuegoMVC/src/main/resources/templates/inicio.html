@@ -7,8 +7,8 @@
 	<h1 style="color: blue">Web de Videojuegos</h1>
 	
 	<!-- Ahora pondemos entre ${} el nombre del atributo que hemos cargado en el controlador dentro del objeto Model -->
-	<p th:text= "'Hola ' + ${nombreUsuario} + ' esta es su lista de Videojuegos:'"></p>
-	<form action="juego" method="get">
+	<p th:text= "'Hola ' + ${nombre_usuario} + ' esta es su lista de Videojuegos:'"></p>
+	<form action="juego" method="post">
 		Id:<input type = "text" name="id"/>
 		<br/>
 		<br/>
@@ -16,8 +16,11 @@
 	
 	</form>
 	
-	
-	     
+	 <h3 style="color: red" th:each="valor : ${listaVideojuegos}">
+	     	<span th:text="${valor.id}"></span>
+	     	<span th:text="${valor.nombre}"></span>
+	     	<span th:text="${valor.marca}"></span>
+	    </h3>
 
 </body>
 </html>
