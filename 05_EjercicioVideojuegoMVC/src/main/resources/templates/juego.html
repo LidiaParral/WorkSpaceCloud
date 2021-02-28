@@ -6,12 +6,10 @@
 </head>
 <body>
 	
-	<form action="listadoVideojuegos" method="get">
-		<input type="submit" value="Mostrar">
-	</form>
-	
-	<p><span th:text="${videojuego} ? ${videojuego} : 'El videojuego introducido no existe'"></span></p>
-	     
+	<h3>Videojuego</h3>
+	<span th:text="$(videojuego.id)"></span>
+	<span th:text="$(videojuego.nombre)"></span>
+	<span th:text="$(videojuego.marca)"></span>
 
 </body>
 </html>
