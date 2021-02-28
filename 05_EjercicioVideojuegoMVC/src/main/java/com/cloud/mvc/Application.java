@@ -1,5 +1,6 @@
 package com.cloud.mvc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
@@ -29,11 +30,12 @@ public class Application {
 		
 		DaoVideojuego daoVideojuego = context.getBean("daoVideojuego", DaoVideojuego.class);
 		
-		
+		ArrayList<Videojuego> listaVideojuegos = new ArrayList<Videojuego>();
 		Videojuego v1 = new Videojuego();
 		v1.setNombre("Sony");
 		v1.setMarca("Sega");
 		v1.setPrecio(10.98);
+		listaVideojuegos.add(v1);
 		
 		daoVideojuego.save(v1);
 		
@@ -41,21 +43,21 @@ public class Application {
 		v2.setNombre("Fornite");
 		v2.setMarca("Epic Games");
 		v2.setPrecio(45.50);
-		
+		listaVideojuegos.add(v2);
 		daoVideojuego.save(v2);
 		
 		Videojuego v3 = new Videojuego();
 		v3.setNombre("Grand Theft Auto V");
 		v3.setMarca("Rockstars Games");
 		v3.setPrecio(47.50);
-		
+		listaVideojuegos.add(v3);
 		daoVideojuego.save(v3);
 		
 		Videojuego v4 = new Videojuego();
 		v4.setNombre("Cyberpunk 2077");
 		v4.setMarca("CD Prokekt");
 		v4.setPrecio(52.50);
-		
+		listaVideojuegos.add(v4);
 		daoVideojuego.save(v4);
 		
 		Videojuego v5 = new Videojuego();
@@ -63,13 +65,17 @@ public class Application {
 		v5.setNombre("Minecraft");
 		v5.setMarca("Mojang Studios");
 		v5.setPrecio(25.50);
+		listaVideojuegos.add(v5);
 		
 		daoVideojuego.save(v5);
 		
-		List<Videojuego> listaVideojuego = daoVideojuego.findAll();
-		for (Videojuego v : listaVideojuego) {
-			System.out.println(v);
+		daoVideojuego.findAll();
+		
+		for (Videojuego videojuego : listaVideojuegos) {
+			System.out.println(videojuego);
 		}
+		
+	
 		
 		System.out.println(u);
 		
