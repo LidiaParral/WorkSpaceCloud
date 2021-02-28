@@ -48,7 +48,7 @@ public class Application {
 		Coche c3 = daoCoche.findById(1).get();
 		System.out.println(c3);
 		
-		//usar el emtodo isPresent() para ver si el objeto exite
+		//usar el metodo isPresent() para ver si el objeto exite
 		Optional<Coche> cocheOptional = daoCoche.findById(2);
 		if(cocheOptional.isPresent()) {
 			System.out.println("existe el coche");

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Inicio</title>
@@ -9,15 +8,15 @@
 	
 	<!-- Ahora pondemos entre ${} el nombre del atributo que hemos cargado en el controlador dentro del objeto Model -->
 	<p th:text= "'Hola ' + ${nombreUsuario} + ' esta es su lista de Videojuegos:'"></p>
+	<form action="buscarId" method="post">
+		Id:<input type = "text" name="id"/>
+		<br/>
+		<br/>
+		<input type="submit" value="Busca por ID"/>
 	
-	<!-- Para una lista de objetos.lista -> nombre del atributos del objeto Model que hemos puesto en
-	valor -> cada uno de los valores que tiene la lista, equivalente a
-	Ej:
-	for(String valor : lista){
-	    System.out.println(valor);
-	    }
-	     -->
-	     <h3 style="color: aqua;">Lista de Videojuegos:</h2>
+	</form>
+	
+	     
 	     <h4 style="color: black" th:each="valor : ${lista}">
 	     	<span th:text="${valor.nombre}"></span>
 	     	<span th:text="${valor.marca}"></span>
