@@ -5,12 +5,12 @@
 <title>Lista de Videojuegos</title>
 </head>
 <body>
-
-	 <h4 style="color: black">
-	     	<span th:text="${valor.nombre}"></span>
-	     	<span th:text="${valor.marca}"></span>
-	     	<span th:text="${valor.precio} + ' euros'" ></span>
-	     </h4>
+	
+	<form action="listadoVideojuegos" method="get">
+		<input type="submit" value="Mostrar">
+	</form>
+	
+	<p><span th:text="${videojuego} ? ${videojuego} : 'El videojuego introducido no existe'"></span></p>
 	     
 
 </body>

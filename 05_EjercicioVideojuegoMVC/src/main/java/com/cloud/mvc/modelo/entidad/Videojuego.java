@@ -40,6 +40,10 @@ public class Videojuego {
 	public void setPrecio(double d) {
 		this.precio = d;
 	}
+	@Override
+	public String toString() {
+		return "Videojuego - id:" + id + ", nombre:" + nombre + ", marca:" + marca + ", precio:" + precio + " euros.";
+	}
 	
 	
 	

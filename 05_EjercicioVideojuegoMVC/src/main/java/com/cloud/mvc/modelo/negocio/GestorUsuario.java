@@ -7,7 +7,6 @@ import com.cloud.mvc.modelo.entidad.Usuario;
 import com.cloud.mvc.modelo.persistencia.DaoUsuario;
 
 
-
 //Hay que dar de alta este objeto en el contexto SPRING
 
 /*Con la anotación @Service se da de alta un objeto en contexto de SPRING,
