@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Videojuego</title>
 </head>
 <body>
 	
-	<h3>Videojuego</h3>
-	<span th:text="$(valor.id)"></span>
-	<span th:text="$(valor.nombre)"></span>
-	<span th:text="$(valor.marca)"></span>
+	<p><span th:text="${videojuego} ? ${videojuego} : 'El videojuego introducido no existe'"></span></p>
 
 </body>
 </html>

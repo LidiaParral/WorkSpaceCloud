@@ -27,10 +27,11 @@ public class GestorVideojuego {
 			
 			Optional<Videojuego> videojuego = daoVideojuego.findById(id);
 			
-			if(videojuego.isEmpty()) {
-				return null;
-			} else {
+			if(videojuego.isPresent()) {
 				return videojuego.get();
+				
+			} else {
+				return null;
 			}
 			
 			

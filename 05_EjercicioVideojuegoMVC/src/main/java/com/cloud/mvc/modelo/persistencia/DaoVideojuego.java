@@ -15,8 +15,7 @@ public interface DaoVideojuego extends JpaRepository<Videojuego, Integer>{
 	//Con JPA se puede crear búsquedas usando convenciones de creación de métodos
 	//Todo método que empiece con las palabras "findBy" + Atributo, JPADATA creará la consulta automáticamente.
 
-	
-	//public Optional<Videojuego> findById(int id);
+
 	
 	
 	

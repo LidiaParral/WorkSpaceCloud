@@ -1,5 +1,6 @@
 package com.cloud.mvc.modelo.controlador;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,9 @@ public class ControladorVideojuego {
 	private GestorVideojuego gestorVideojuego;
 	
 	@GetMapping("consultaVideojuegoID")
-	public String consultarVideojuegoId(@RequestParam("id_videojuego") int id, Model model) {
+	public String consultarVideojuegoId(@RequestParam("id_videojuego") int id, Model model) throws NoSuchAlgorithmException{
 		Videojuego v = gestorVideojuego.buscarVideojuego(id);
 		
-		//System.out.println("\n" + v);
 		
 		model.addAttribute("videojuego", v);
 		

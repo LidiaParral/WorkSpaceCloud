@@ -48,10 +48,7 @@ public class ControladorUsuario {
 				//la vista
 				model.addAttribute("nombre_usuario", nombre);
 				
-				List<Videojuego> listaVideojuego = gestVideojuego.obtenerListaVideojuegos();
-				
-				model.addAttribute("lista", listaVideojuego);
-				
+		
 	
 			 //Retorna inicio.xml
 			 return "inicio";
