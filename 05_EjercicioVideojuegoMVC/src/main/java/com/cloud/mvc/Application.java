@@ -21,6 +21,8 @@ public class Application {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
 		
 		DaoUsuario daoUser = context.getBean("daoUsuario", DaoUsuario.class);
+
+		DaoVideojuego daoVideojuego = context.getBean("daoVideojuego", DaoVideojuego.class);
 		
 		Usuario u = new Usuario();
 		u.setNombre("Lidia");
@@ -28,7 +30,6 @@ public class Application {
 		
 		daoUser.save(u);
 		
-		DaoVideojuego daoVideojuego = context.getBean("daoVideojuego", DaoVideojuego.class);
 		
 		ArrayList<Videojuego> listaVideojuegos = new ArrayList<Videojuego>();
 		Videojuego v1 = new Videojuego();
@@ -71,13 +72,7 @@ public class Application {
 		
 		daoVideojuego.findAll();
 		
-		for (Videojuego videojuego : listaVideojuegos) {
-			System.out.println(videojuego);
-		}
 		
-	
-		
-		System.out.println(u);
 		
 		
 	}

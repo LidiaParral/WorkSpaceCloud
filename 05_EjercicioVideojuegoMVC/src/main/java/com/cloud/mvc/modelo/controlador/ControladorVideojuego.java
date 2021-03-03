@@ -26,7 +26,7 @@ public class ControladorVideojuego {
 		
 		model.addAttribute("videojuego", v);
 		
-		return "juego";
+		return "juegoID";
 	}
 	
 	@GetMapping("listadoVideojuegos")

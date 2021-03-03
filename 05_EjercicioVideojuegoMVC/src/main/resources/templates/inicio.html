@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Inicio</title>
+<meta charset="UTF-8">
+<title>Lista de Videojuegos</title>
 </head>
 <body>
-	<h1 style="color: blue">Web de Videojuegos</h1>
+	<h3>Esta es su lista de videojuegos</h3>
+	<h4 style="color: purple" th:each="valor : ${listaVideojuegos}">
+	   <span th:text="${valor.nombre}"></span>
+	    <span th:text="${valor.compania}"></span>
+	    <span th:text="${valor.precio}"></span>
+	    <span th:text="${valor.puntuacion}"></span>
+	</h4>
 	
-	<!-- Ahora pondemos entre ${} el nombre del atributo que hemos cargado en el controlador dentro del objeto Model -->
-	<p th:text= "'Hola ' + ${nombre_usuario} + ' esta es su lista de Videojuegos:'"></p>
-	<form action="juego" method="get">
-		Id:<input type = "text" name="id"/>
-		<br/>
-		<br/>
-		<input type="submit" value="Buscar Videojuego"/>
+	<form action="consultaVideojuegoID" method="get">
+        <input type="text" name="id_videojuego" placeholder="Introduce un id">
+        <input type="submit" value="Consultar">
+    </form>
 	
-	</form>
-	
-	 <h3 style="color: red" th:each="valor : ${listaVideojuegos}">
-	     	<span th:text="${valor.id}"></span>
-	     	<span th:text="${valor.nombre}"></span>
-	     	<span th:text="${valor.marca}"></span>
-	    </h3>
 
 
 </body>
